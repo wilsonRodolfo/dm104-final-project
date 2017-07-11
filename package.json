@@ -1,0 +1,27 @@
+{
+  "name": "dm104-final-project",
+  "version": "1.0.0",
+  "description": "Final project of the discipline dm104",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsonRodolfo/dm104-final-project.git"
+  },
+  "keywords": [
+    "Final",
+    "project",
+    "dm104"
+  ],
+  "author": "Wilson Rodolfo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilsonRodolfo/dm104-final-project/issues"
+  },
+  "homepage": "https://github.com/wilsonRodolfo/dm104-final-project#readme"
+}
