@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cadastro</title>
+
+    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/cadastro.css" rel="stylesheet">
+</head>
+
+<body>
+    <form class="form-horizontal col-md-offset-4 col-md-4" id="formcadastrar" action="" method="POST">
+        <legend>Cadastro</legend>
+        <div class="form-group">
+            <label for="inputNome" class="col-sm-2 control-label">Nome</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputNome" placeholder="Nome completo">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputTel" class="col-sm-2 control-label">Telefone</label>
+            <div class="col-sm-10">
+                <input type="tel" class="form-control" id="inputTel" placeholder="(__) ____-____">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="pull-right">
+            <a class="btn btn-primary" href="index.html" role="button" id="btnvoltar">Voltar</a>
+            <input type="submit" class="btn btn-primary" id="btncadastrar" value="Cadastrar">
+        </div>
+    </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/ClienteDAO.js"></script>
+</body>
+
+</html>

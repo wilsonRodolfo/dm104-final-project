@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:700');
+
+body {
+    background-color: #cccccc;
+}
+
+form.form-horizontal {
+    /*background: url("../../images/Embala-festa-logo.jpg") no-repeat;*/
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+legend {
+    border: none;
+    margin-left: 40px;
+    margin-top: 0px;
+    color: #cecece;
+    font-family: 'Josefin Slab', serif;
+    font-size: 60px;
+}
+
+div.btn-group #btnvoltar {
+    margin-right: 10px;
+}
