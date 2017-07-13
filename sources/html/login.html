@@ -13,31 +13,31 @@
 </head>
 
 <body>
-    <form class="form-horizontal col-md-offset-4 col-md-4" id="formlogin">
-        <legend>Login</legend>
-        <div class="form-group">
-            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-            <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+    <form id="formlogin" class="form-horizontal col-md-offset-4 col-md-4" action="" method="POST">
+        <fieldset>
+            <legend>Login</legend>
+            <div class="form-group">
+                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="inputPassword" class="col-sm-2 control-label">Senha</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            <div class="form-group">
+                <label for="inputPassword" class="col-sm-2 control-label">Senha</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
             </div>
-        </div>
 
-        <div class="pull-right"">
-            <a class="btn btn-primary" href="index.html" role="button" id="btnvoltar">Voltar</a>
-            <input type="submit" class="btn btn-primary" id="btnentrar" value="Entrar">
-        </div>
+            <div class="pull-right">
+                <a class="btn btn-primary" href="index.html" role="button" id="btnvoltar">Voltar</a>
+                <input type="submit" class="btn btn-primary" id="btnentrar" value="Entrar">
+            </div>
+        </fieldset>
     </form>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/ClienteDAO.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
 </body>
 
 </html>

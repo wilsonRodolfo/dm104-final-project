@@ -1,3 +1,7 @@
+body {
+    background-image: url("../../images/loja.jpg");
+}
+
 ul.dropdown-menu#dropdownprincipal{
    padding: 5px; 
 }

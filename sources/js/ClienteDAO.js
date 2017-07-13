@@ -8,48 +8,6 @@ var ClienteDAO = {
 
 	list: [],
 
-	init: function () {
-		ClienteDAO.submitCadastro();
-		ClienteDAO.submitLogin();
-	},
-
-	submitCadastro: function () {
-		var formCadastro = document.getElementById('formcadastrar');
-		if (formCadastro) {
-			formCadastro.onsubmit = function () {
-				ClienteDAO.unserializeAndParse();
-				console.log(ClienteDAO.list);
-				let cliente = {};
-				cliente.nome = formCadastro.inputNome.value;
-				cliente.telefone = formCadastro.inputTel.value;
-				cliente.email = formCadastro.inputEmail3.value;
-				cliente.senha = formCadastro.inputPassword3.value;
-				ClienteDAO.save(cliente);
-				return false; //to prevent the formCadastro submition
-			};
-		}
-	},
-
-	submitLogin: function () {
-		var formLogin = document.getElementById('formlogin');
-		if (formLogin) {
-			formLogin.onsubmit = function () {
-				ClienteDAO.unserializeAndParse();
-				console.log("formLogin.inputEmail.value " + formLogin.inputEmail.value);
-				let cliente = ClienteDAO.get(formLogin.inputEmail.value);
-				if (cliente) {
-					if (cliente.senha == formLogin.inputPassword.value)
-						window.location.href = "admin.html";
-					else
-						window.alert("Senha incorreta!");
-
-				} else
-					window.alert("Email incorreto!");
-				return false; //to prevent the formLogin submition
-			};
-		}
-	},
-
 	save: function (cliente) {
 		var list = ClienteDAO.list, index = ClienteDAO.getIndex(cliente);
 
@@ -133,5 +91,3 @@ var ClienteDAO = {
 	}
 
 };
-
-ClienteDAO.init();
