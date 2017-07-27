@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Carrinho</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid" id="barra-menu">
+                    <a href="index.html"><img src="../../images/Embala-festa-logo-cm.png" alt="Embala Festa logo" class="img-rounded"></a>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="carrinho.html">
+                             <span id="quantCarrinho" class="badge pull-right">0</span>
+                                <i class="glyphicon glyphicon-shopping-cart" ></i>
+                            </a>
+                        </li>
+                        <li><a href="account.html"><i class="glyphicon glyphicon-user"></i></a></li>
+                        <li class="dropdown">
+                            <a href="#" id="saudacao" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Olá, faça seu login <span class="caret"></span></a>
+                            <ul class="dropdown-menu" id="dropdownprincipal">
+                                <li><a id="btnEntrar" class="btn btn-primary btn-block" onclick="sessao.btnLoginClick()" role="button">Entrar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a id="linkCadastrar" href="cadastro.html">Cliente novo? Cadastrar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="well">
+            <div class="row">
+                <div class="container-fluid">
+                    <div class="caption" id="tableprodutos">
+                        <h1>Produtos</h1>
+                    </div>
+                </div>
+
+                <table id="tb-carrinho" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Imagem</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Quantidade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="pull-right">
+                    <a class="btn btn-success btn-block" href="NotaFiscal.html" target="_blank" role="button">
+                        Finalizar compra
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="../js/sessao.js"></script>
+    <script type="text/javascript" src="../js/CarrinhoDAO.js"></script>
+    <script type="text/javascript" src="../js/TableController.js"></script>
+    <script type="text/javascript" src="../js/Carrinho.js"></script>
+
+    <script type="text/javascript">
+        var logged = sessao.checkAndGetUser();
+        if (logged) {
+            sessao.checkAndSetUser();
+            document.getElementById('quantCarrinho').textContent = CarrinhoDAO.getQuant();
+            Carrinho.listaCarrinho();
+        } else {
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

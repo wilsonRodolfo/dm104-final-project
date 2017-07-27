@@ -18,6 +18,7 @@ var login = {
                     let cliente = ClienteDAO.get(form.inputEmail.value);
                     if (cliente) {
                         if (cliente.senha == form.inputPassword.value) {
+                            sessao.login(cliente);
                             window.location.href = "index.html";
                         }
                         else
@@ -32,5 +33,4 @@ var login = {
     }
 };
 
-ClienteDAO.unserializeAndParse();
 login.init();

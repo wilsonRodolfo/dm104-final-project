@@ -10,79 +10,101 @@
 
   <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/principal.css" rel="stylesheet">
+
 </head>
 
 <body>
   <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <img src="../../images/Embala-festa-logo-cm.png" alt="Embala Festa logo" class="img-rounded">
+    <div class="container-fluid" id="barra-menu">
+      <a href="index.html"><img src="../../images/Embala-festa-logo-cm.png" alt="Embala Festa logo" class="img-rounded"></a>
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a id="iconCarrinho" href="carrinho.html">
+            <span id="quantCarrinho" class="badge pull-right">0</span>
+            <i class="glyphicon glyphicon-shopping-cart" ></i>
+          </a>
+        </li>
+        <li><a id="iconUser" href="account.html"><i class="glyphicon glyphicon-user"></i></a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Olá, faça seu login <span class="caret"></span></a>
+          <a href="#" id="saudacao" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Olá, faça seu login <span class="caret"></span></a>
           <ul class="dropdown-menu" id="dropdownprincipal">
-            <form action="login.html">
-              <a class="btn btn-default btn-primary btn-block" href="login.html" role="button">Entrar</a>
-            </form>
+            <li><a id="btnEntrar" class="btn btn-primary btn-block" onclick="sessao.btnLoginClick()" role="button">Entrar</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="cadastro.html">Cliente novo? Cadastrar</a></li>
+            <li><a id="linkCadastrar" href="cadastro.html">Cliente novo? Cadastrar</a></li>
           </ul>
         </li>
       </ul>
     </div>
   </nav>
+
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
         <div class="panel panel-success">
           <div class="panel-heading">Painel Frozen</div>
           <div class="panel-body"><img src="../../images/painel-frozen.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-          <div class="panel-footer">R$ 19,90 <a href="#" class="btn btn-primary pull-right" role="button">Comprar</a></div>
-
+          <div class="panel-footer"> R$ 19,90<a href="#" class="btn btn-primary pull-right" onclick="Carrinho.add('1')" role="button">Comprar</a></div>
+          <div class="clearfix"></div>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="panel panel-success">
           <div class="panel-heading">Painel Homem Aranha</div>
           <div class="panel-body"><img src="../../images/painel-homemaranha.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-          <div class="panel-footer">R$ 19,90</div>
+          <div class="panel-footer">R$ 19,90<a href="#" class="btn btn-primary pull-right" onclick="Carrinho.add('2')" role="button">Comprar</a></div>
+          <div class="clearfix"></div>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="panel panel-success">
           <div class="panel-heading">Painel Carros</div>
           <div class="panel-body"><img src="../../images/painel-carros.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-          <div class="panel-footer">R$ 19,90</div>
+          <div class="panel-footer">R$ 19,90<a href="#" class="btn btn-primary pull-right" onclick="Carrinho.add('3')" role="button">Comprar</a></div>
+          <div class="clearfix"></div>
         </div>
       </div>
     </div>
-  </div><br>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="panel panel-success">
-          <div class="panel-heading">Painel Minnie</div>
-          <div class="panel-body"><img src="../../images/painel-minnie.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-          <div class="panel-footer">R$ 19,90</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">Painel Minnie</div>
+            <div class="panel-body"><img src="../../images/painel-minnie.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">R$ 19,90<a href="#" class="btn btn-primary pull-right" onclick="Carrinho.add('4')" role="button">Comprar</a></div>
+            <div class="clearfix"></div>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-success">
-          <div class="panel-heading">Painel Galinha Pintadinha</div>
-          <div class="panel-body"><img src="../../images/painel-galinha.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-          <div class="panel-footer">R$ 19,90</div>
+        <div class="col-sm-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">Painel Galinha Pintadinha</div>
+            <div class="panel-body"><img src="../../images/painel-galinha.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">R$ 19,90<a href="#" class="btn btn-primary pull-right" onclick="Carrinho.add('5')" role="button">Comprar</a></div>
+            <div class="clearfix"></div>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="panel panel-success">
-          <div class="panel-heading">Painel Princesa Sofia</div>
-          <div class="panel-body"><img src="../../images/painel-sofia.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-          <div class="panel-footer">R$ 19,90</div>
+        <div class="col-sm-4">
+          <div class="panel panel-success">
+            <div class="panel-heading">Painel Princesa Sofia</div>
+            <div class="panel-body"><img src="../../images/painel-sofia.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+            <div class="panel-footer">R$ 19,90<a href="#" class="btn btn-primary pull-right" onclick="Carrinho.add('6')" role="button">Comprar</a></div>
+            <div class="clearfix"></div>
+          </div>
         </div>
       </div>
     </div>
   </div><br><br>
-  
+
+  <script type="text/javascript" src="../js/ClienteDAO.js"></script>
+  <script type="text/javascript" src="../js/ProdutoDAO.js"></script>
+  <script type="text/javascript" src="../js/sessao.js"></script>
+  <script type="text/javascript" src="../js/CarrinhoDAO.js"></script>
+  <script type="text/javascript" src="../js/Carrinho.js"></script>
+
+  <script type="text/javascript">
+    sessao.checkAndSetUser();
+    document.getElementById('quantCarrinho').textContent = CarrinhoDAO.getQuant();
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script type="text/javascript" src="../../lib/bootstrap/js/bootstrap.min.js"></script>
 </body>

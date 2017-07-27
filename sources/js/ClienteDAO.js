@@ -1,28 +1,32 @@
 /* JavaScript Document */
-
+	
 var ClienteDAO = {
 
 	DB_KEY: "clientes",
 	NEW: 1,
 	UPDATE: 2,
+    ERRO: -1,
 
 	list: [],
 
 	save: function (cliente) {
 		var list = ClienteDAO.list, index = ClienteDAO.getIndex(cliente);
+        let retorno = ClienteDAO.ERRO;
 
 		if (index > -1) {
 			list[index] = cliente;
 			console.log("Cliente já existe... Atualizando");
-			return ClienteDAO.UPDATE;
+			
+            retorno = ClienteDAO.UPDATE;
 		}
 		else {
 			list.push(cliente);
+			retorno = ClienteDAO.NEW;
 		}
 
 		ClienteDAO.serializeAndSave();
 
-		return ClienteDAO.NEW;
+		return retorno;
 	},
 
 	retrieve: function () {

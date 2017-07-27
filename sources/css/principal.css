@@ -1,5 +1,12 @@
 body {
     background-image: url("../../images/loja.jpg");
+     /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 ul.dropdown-menu#dropdownprincipal{
